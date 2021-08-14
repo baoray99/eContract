@@ -1,0 +1,16 @@
+.tab-btn {
+  border: 1px solid #edf2f7;
+  height: 4rem;
+}
+.tab-btn.active{
+  border-bottom: 4px solid #567df4;
+}
+.tab-btn.active {
+  background-color: rgb(235, 239, 254);
+  color: #567df4;
+  border: 0px 0px 0px 3px solid #567df4;
+}
+.tab-btn:hover {
+  background-color: rgb(235, 239, 254);
+  color: #567df4;
+}

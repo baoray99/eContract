@@ -1,0 +1,24 @@
+<div class="modal-header border-bottom-0" >
+  <h4 class="modal-title font-weight-bold">Lỗi cập nhật</h4>
+  <button
+    type="button"
+    class="close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>Thông tin cấu hình phải đáp ứng điều kiện</p>
+  <p>0 ≤ ngưỡng cảnh báo ≤ ngưỡng thành công ≤ 100.</p>
+</div>
+<div class="modal-footer border-top-0">
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="activeModal.close('Close click')"
+  >
+    Đã hiểu
+  </button>
+</div>

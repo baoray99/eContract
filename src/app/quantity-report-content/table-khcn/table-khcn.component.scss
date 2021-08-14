@@ -1,0 +1,49 @@
+table {
+    overflow-x: scroll;
+    thead {
+      th {
+        background-color: #edf2f7;
+        padding: 1rem;
+      }
+      th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+      }
+      th:nth-child(2) {
+        position: sticky;
+        left: 54.2px;
+        z-index: 2;
+      }
+    }
+    tbody {
+      position: relative;
+      th, td {
+        background-color: white;
+        padding: 1rem;
+      }
+      th:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 3;
+      }
+      th:nth-child(2) {
+        position: sticky;
+        left: 54.2px;
+        z-index: 3;
+      }
+    }
+    .col2::after {
+      position: absolute;
+      top: 0;
+      right: -15px;
+      bottom: 0;
+      width: 15px;
+      content: "";
+      transition: box-shadow 0.3s ease;
+    }
+    .col2.roll::after {
+      box-shadow: inset 10px 0 8px -8px rgb(113 128 150 / 50%);
+    }
+  }
+  

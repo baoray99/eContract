@@ -1,0 +1,83 @@
+//Màu cơ bản
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #f49351 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$white:    #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+//Bộ màu giao diện
+$primary: #567DF4 !default;
+$danger: #FF7474 !default;
+$warning: #F5A623 !default;
+$success: #2dc76d !default;
+
+//Code block
+$bg-codeblock: #505669 !default;
+$bg-codeblock-toolbar: #3D4255 !default;
+$color-method-api: #85D996 !default;
+$color-method-post: #85D996 !default;
+$color-method-get: #85D996 !default;
+$color-method-put: #85D996 !default;
+$color-method-delete: #85D996 !default;
+$color-method-update: #85D996 !default;
+$color-lable-copyclipboard: #ABCDFA !default;
+$color-url: #A3A3A3 !default;
+$color-cursor-mouse-edit: #ffffff8a !default;
+$color-textarea: #ffffff !default;
+$step-pending: $gray-500;
+$step-active: $primary;
+$step-done: $success;
+$btn-orange: $orange;
+$btn-orange-hover: #e28a4e;
+
+//Màu tùy chọn thêm
+$body_bg: #f1f3ff !default;
+$border_color_primary: #f1f3ff !default;
+$input_disabled: #e9ecef !default;
+$input_not_disabled: #e9ecef !default;
+$bg-badge-light-new: #e9ecef !default;
+
+.dark-theme {
+    $primary: black;
+}
+
+$theme-colors: (
+    "primary":    $primary,
+    // "secondary":  $secondary,
+    "success":    $success,
+    // "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    // "light":      $light,
+    // "dark":       $dark
+);
+
+$text_dark: #1A202C;
+$header_table_bg: #EDF2F7;
+$icon_color: #DADADA;
+$ng_selected_active_bg: rgb(86,125,244, 1);
+
+$grey_light: #EDF2F7;
+$grey_lightest: #F7FAFC;
+$grey_dark: #A0AEC0;
+$grey_default: #CBD5E0;
+$grey_darkest: #718096;
+
+$green-success: #29d395;

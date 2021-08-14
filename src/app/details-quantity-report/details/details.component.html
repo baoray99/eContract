@@ -1,0 +1,243 @@
+<section class="details-content mb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md bg-white rounded p-4">
+        <div class="dropdown-service">
+          <div class="container-fluid">
+            <div class="row mb-3">
+              <div class="dropdown col-md p-0">
+                <button
+                  class="
+                    btn btn-outline-secondary
+                    font-weight-bold
+                    w-100
+                    d-flex
+                    justify-content-between
+                    p-2
+                  "
+                  (click)="toggleDrop()"
+                >
+                  <span>Gói nâng cao (Đang sử dụng)</span>
+                  <i class="fas fa-sort-down"></i>
+                </button>
+                <div
+                  class="dropdown-prov-content rounded m-0 w-100"
+                  [class.show]="isShow"
+                >
+                  <ul class="m-0 p-4">
+                    <!-- <li *ngFor="let prov of provinces; let i = index">
+                      <label class="container"
+                        >{{ prov.name }}
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li> -->
+                    alo
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details-service">
+          <div class="container-fluid">
+            <div class="row mb-3">
+              <div class="col-md p-0">
+                <p class="text-primary font-weight-bold">
+                  Thông tin gói dịch vụ sử dụng
+                </p>
+                <hr />
+                <div class="row m-0">
+                  <div class="col p-0">
+                    <ul class="p-0 m-0">
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Tên gói dịch vụ
+                          </div>
+                          <div class="col-7">Gói nâng cao</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Số lượng hợp đồng
+                          </div>
+                          <div class="col-7">74/120</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Ngày đăng ký gói
+                          </div>
+                          <div class="col-7">21/08/2020</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Ngày hết hạn
+                          </div>
+                          <div class="col-7">21/08/2021</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Dung lượng upload hợp đồng
+                          </div>
+                          <div class="col-7">15 Mb</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Số lượng bộ phận
+                          </div>
+                          <div class="col-7">07</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Số lượng nhân sự
+                          </div>
+                          <div class="col-7">24</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Số lượng SMS OTP
+                          </div>
+                          <div class="col-7">02</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Số lượng quét eKYC
+                          </div>
+                          <div class="col-7">49</div>
+                        </div>
+                      </li>
+                      <li class="container-fluid p-0">
+                        <div class="row m-0">
+                          <div class="col-5 p-0 font-weight-bold">
+                            Số lượng ký Onetime CA
+                          </div>
+                          <div class="col-7">05</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-abilities">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md p-0">
+                <p class="text-primary font-weight-bold">Danh sách chức năng</p>
+                <hr />
+                <div class="table-responsive">
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr class="border-top-0">
+                        <th scope="col">STT</th>
+                        <th scope="col">Chức năng</th>
+                        <th scope="col">Chi tiết</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan="2" class="align-middle">01</td>
+                        <td rowspan="2" class="align-middle">
+                          Quản lý thông tin tài khoản
+                        </td>
+                        <td>Nâng cấp dịnh danh GPKD</td>
+                      </tr>
+                      <tr>
+                        <td>Cập nhật thông tin tài khoản</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="5" class="align-middle">02</td>
+                        <td rowspan="5" class="align-middle">
+                          Quản lý hợp đồng
+                        </td>
+                        <td>Danh sách gói cước</td>
+                      </tr>
+                      <tr>
+                        <td>Danh sách chức năng gói</td>
+                      </tr>
+                      <tr>
+                        <td>Tạo, chỉnh sửa hợp đồng</td>
+                      </tr>
+                      <tr>
+                        <td>Đàm phán hợp đồng</td>
+                      </tr>
+                      <tr>
+                        <td>Phê duyệt hợp đồng</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="5" class="align-middle">03</td>
+                        <td rowspan="5" class="align-middle">
+                          Quản lý xác minh đối tác
+                        </td>
+                        <td>Danh sách đối tác</td>
+                      </tr>
+                      <tr>
+                        <td>Xác minh phê duyệt đối tác</td>
+                      </tr>
+                      <tr>
+                        <td>Xem thông tin danh sách chưa phê duyệt</td>
+                      </tr>
+                      <tr>
+                        <td>Xem thông tin danh sách đã phê duyệt</td>
+                      </tr>
+                      <tr>
+                        <td>Xem thông tin danh sách từ chối phê duyệt</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="2" class="align-middle">04</td>
+                        <td rowspan="2" class="align-middle">
+                          Quản lý hợp đồng mẫu
+                        </td>
+                        <td>Xem thông tin hợp đồng mẫu</td>
+                      </tr>
+                      <tr>
+                        <td>Tạo, chỉnh sửa hợp đồng mẫu</td>
+                      </tr>
+                      <tr>
+                        <td rowspan="5" class="align-middle">05</td>
+                        <td rowspan="5" class="align-middle">
+                          Quản lý tổ chức
+                        </td>
+                        <td>Phân quyền nhóm người dùng</td>
+                      </tr>
+                      <tr>
+                        <td>Xem danh sách bộ phận</td>
+                      </tr>
+                      <tr>
+                        <td>Tạo, chỉnh sửa bộ phận</td>
+                      </tr>
+                      <tr>
+                        <td>Xem danh sách nhân viên</td>
+                      </tr>
+                      <tr>
+                        <td>Tạo, chỉnh sửa thông tin nhân viên</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

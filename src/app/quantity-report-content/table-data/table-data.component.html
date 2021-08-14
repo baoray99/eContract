@@ -1,0 +1,85 @@
+<div class="table-responsive my-0" (scroll)="stickyCol()">
+  <table class="mb-0 w-100">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col" class="col2" [class.roll]="isRolling">Tên tổ chức</th>
+        <th scope="col" id="colcheck">Mã số thuế</th>
+        <th scope="col">Email</th>
+        <th scope="col">Số điện thoại</th>
+        <th scope="col">Tỉnh/Thành phố</th>
+        <th scope="col">Tài khoản</th>
+        <th scope="col">Gói đang dùng</th>
+        <th scope="col">Số lượng HĐ</th>
+        <th scope="col" class="d-flex flex-column">
+          Nhân viên phụ trách <em>(Mã HRM)</em>
+        </th>
+        <th scope="col">Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row" class="text-center font-weight-normal">01</th>
+        <th
+          scope="row"
+          class="col2 font-weight-normal"
+          [class.roll]="isRolling"
+        >
+          <a href="#">Công Ty TNHH Hoàng Ngọc Thái</a>
+        </th>
+        <td id="colcheck">4316488841</td>
+        <td>nhungptn@gmail.com</td>
+        <td>0977585329</td>
+        <td>Đà Nẵng</td>
+        <td>hoangngocthai_sysadmin</td>
+        <td>Gói dùng thử</td>
+        <td>23/30</td>
+        <td>
+          <div class="row m-0">Phạm Thị Ngọc Nhung</div>
+          <div class="row m-0">
+            <div
+              class="
+                d-inline-block
+                p-1
+                text-dark
+                font-weight-bold
+                bg-light
+                rounded
+              "
+            >
+              IT01221
+            </div>
+          </div>
+        </td>
+        <td class="text-center"><i class="fas fa-ellipsis-v"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container-fluid">
+  <div
+    class="row px-4 py-3 border-top rounded-bottom"
+    style="background-color: #edf2f7"
+  >
+    <div class="col-md-6 p-0">
+      <label class="m-0 text-secondary"
+        >Hiển thị kết quả từ 1 đến 10 trong tổng số 100</label
+      >
+    </div>
+    <div class="col-md-6 p-0 d-flex justify-content-end">
+      <div class="col-md-4 d-flex justify-content-around align-items-center">
+        <label class="m-0 text-dark">Số dòng hiển thị:</label>
+        <span class="text-primary">10</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="col-md-5 d-flex justify-content-between align-items-center">
+        <a class="text-dark" href="#"><i class="fas fa-chevron-left"></i></a>
+        <span class="text-secondary">1</span>
+        <span class="text-secondary">2</span>
+        <span class="text-secondary">...</span>
+        <span class="text-secondary">11</span>
+        <a class="text-dark" href="#"><i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

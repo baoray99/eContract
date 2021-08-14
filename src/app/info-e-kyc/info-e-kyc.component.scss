@@ -1,0 +1,53 @@
+.tab-btn {
+  border: 1px solid #edf2f7;
+  height: 4rem;
+  color: #718096;
+}
+.tab-btn.active {
+  border-bottom: 4px solid #567df4;
+  background-color: rgb(235, 239, 254);
+  color: #567df4;
+}
+.tab-btn:hover {
+  background-color: rgb(235, 239, 254);
+  color: #567df4;
+}
+// .btn-options {
+//   display: none;
+//   &.edited {
+//     display: block;
+
+//   }
+// }
+// .btn-edit {
+//   display: block;
+//   &.hide {
+//     display: none;
+//   }
+// }
+table {
+  overflow-x: scroll;
+  thead {
+    th {
+      background-color: #edf2f7;
+      padding: 1rem;
+    }
+  }
+  tbody {
+    position: relative;
+    td {
+      background-color: white;
+      padding: 1rem;
+      .tag {
+        &.success {
+          background-color: rgb(221, 248, 238);
+          color: #29d395;
+        }
+        &.warning {
+          color: #ff7474;
+          background-color: rgb(255, 233, 233);
+        }
+      }
+    }
+  }
+}

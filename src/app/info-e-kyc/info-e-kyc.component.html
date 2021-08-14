@@ -1,0 +1,211 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col py-4">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-4">
+            <div class="col d-md-flex justify-content-between">
+              <h1 class="text-dark font-weight-bold mb-md-0 mb-sm-3">
+                <label class="m-0">Thông tin cấu hình thông số eKYC</label>
+              </h1>
+              <ng-container *ngIf="!isEdited; else elseTemplate">
+                <button
+                  class="btn-edit btn btn-primary w-md-25"
+                  (click)="startEdit()"
+                  [class.hide]="isEdited"
+                >
+                  <i class="fas fa-pen mr-2"></i>
+                  Chỉnh sửa
+                </button>
+              </ng-container>
+              <ng-template #elseTemplate>
+                <div class="btn-options">
+                  <button
+                    class="btn btn-outline-primary mr-3 h-100"
+                    (click)="startEdit()"
+                  >
+                    <i class="fas fa-times mr-2"></i>Hủy
+                  </button>
+                  <button class="btn btn-primary h-100" (click)="open(content)">
+                    <i class="fas fa-save mr-2"></i>Lưu
+                  </button>
+                  <ng-template #content let-modal>
+                    <div class="modal-header border-bottom-0">
+                      <h4
+                        class="modal-title font-weight-bold"
+                        id="modal-basic-title"
+                      >
+                        Xác nhận
+                      </h4>
+                      <button
+                        type="button"
+                        class="close"
+                        aria-label="Close"
+                        (click)="modal.close('Cross click')"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Bạn chắc chắn muốn cập nhật cấu hình thông số eKYC?</p>
+                    </div>
+                    <div class="modal-footer border-top-0">
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                        (click)="modal.close('Close click')"
+                      >
+                        Đóng
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        (click)="modal.close('Save click'); saveEdit()"
+                      >
+                        Cập nhật
+                      </button>
+                    </div>
+                  </ng-template>
+                </div>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="tab-bar">
+        <div class="container-fluid">
+          <div class="row mx-0 mb-4 bg-white">
+            <div class="col-2 p-0 bg-white" *ngFor="let btn of cateButton">
+              <button
+                class="
+                  tab-btn
+                  btn
+                  rounded-0
+                  w-100
+                  d-flex
+                  justify-content-center
+                  align-items-center
+                "
+                (click)="changeActive(btn.code)"
+                [class.active]="btn.isActive"
+              >
+                <i class="fas {{ btn.icon }} mr-2" style="font-size: 16px"></i>
+                <span class="d-none d-md-block mb-0">{{ btn.vietSub }}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="edit-table">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="table-responsive my-0">
+                <table class="mb-0 w-100">
+                  <thead>
+                    <tr>
+                      <th scope="col">STT</th>
+                      <th scope="col">Tên trường</th>
+                      <th scope="col">Kiểu dữ liệu</th>
+                      <th scope="col">Mô tả</th>
+                      <th scope="col">Ngưỡng cảnh báo</th>
+                      <th scope="col">Ngưỡng thành công</th>
+                      <th scope="col">Trạng thái</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      class="border-bottom"
+                      *ngFor="let data of datas; let idx = index"
+                    >
+                      <td>{{ idx }}</td>
+                      <td>{{ data.nameField }}</td>
+                      <td>{{ data.typeField }}</td>
+                      <td>{{ data.description }}</td>
+                      <ng-container *ngIf="isEdited; else editTemplate">
+                        <td>
+                          <input
+                            type="number"
+                            class="form-control"
+                            required
+                            value="{{ data.warning }}"
+                            [(ngModel)]="data.warning"
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="number"
+                            class="form-control"
+                            required
+                            value="{{ data.success }}"
+                            [(ngModel)]="data.success"
+                          />
+                        </td>
+                        <td ngbDropdown container="body">
+                          <button
+                            class="
+                              d-flex
+                              justify-content-between
+                              btn btn-outline-secondary
+                              align-items-center
+                              w-100
+                            "
+                            ngbDropdownToggle
+                            [(ngModel)]="data.status"
+                          >
+                            {{
+                              data.status ? "Đang hoạt động" : "Không hoạt động"
+                            }}
+                          </button>
+                          <div ngbDropdownMenu>
+                            <button
+                              ngbDropdownItem
+                              (click)="data.status = true"
+                            >
+                              Đang hoạt động
+                            </button>
+                            <button
+                              ngbDropdownItem
+                              (click)="data.status = false"
+                            >
+                              Không hoạt động
+                            </button>
+                          </div>
+                        </td>
+                      </ng-container>
+                      <ng-template #editTemplate>
+                        <td>
+                          <label class="m-0">{{ data.warning }}</label>
+                        </td>
+                        <td>
+                          <label class="m-0">{{ data.success }}</label>
+                        </td>
+                        <td>
+                          <div
+                            class="
+                              tag
+                              d-inline-block
+                              p-2
+                              font-weight-bold
+                              rounded
+                            "
+                            [class.success]="data.status"
+                            [class.warning]="!data.status"
+                          >
+                            {{
+                              data.status ? "Đang hoạt động" : "Không hoạt động"
+                            }}
+                          </div>
+                        </td>
+                      </ng-template>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
